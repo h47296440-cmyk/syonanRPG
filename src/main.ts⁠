@@ -1,0 +1,27 @@
+// src/main.ts
+
+const canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
+const ctx = canvas.getContext('2d')!;
+const loading = document.getElementById('loading')!;
+
+// 画面サイズの初期設定
+canvas.width = 400;
+canvas.height = 400;
+
+// ロード完了処理（簡易的）
+window.onload = () => {
+    loading.style.display = 'none';
+    gameLoop();
+};
+
+function gameLoop() {
+    // 画面クリア
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // キャラクター描画
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(180, 180, 40, 40);
+
+    requestAnimationFrame(gameLoop);
+}
