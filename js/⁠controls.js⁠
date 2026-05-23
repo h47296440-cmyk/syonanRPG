@@ -1,0 +1,6 @@
+export function initControls(player) {
+    document.getElementById('up').onclick = () => player.y -= player.speed;
+    document.getElementById('down').onclick = () => player.y += player.speed;
+    document.getElementById('left').onclick = () => player.x -= player.speed;
+    document.getElementById('right').onclick = () => player.x += player.speed;
+}
