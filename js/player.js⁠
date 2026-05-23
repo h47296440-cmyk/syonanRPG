@@ -1,0 +1,7 @@
+export const player = {
+    x: 160, y: 160, size: 20, speed: 20,
+    draw(ctx) {
+        ctx.fillStyle = '#0f0';
+        ctx.fillRect(this.x, this.y, this.size, this.size);
+    }
+};
