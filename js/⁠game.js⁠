@@ -1,0 +1,15 @@
+import { player } from './player.js';
+import { initControls } from './controls.js';
+
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+initControls(player);
+
+function update() {
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    player.draw(ctx);
+    requestAnimationFrame(update);
+}
+update();
