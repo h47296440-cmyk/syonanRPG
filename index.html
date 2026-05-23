@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RPG Project</title>
+    <style>
+        body { 
+            margin: 0; 
+            background: #000; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+        canvas { 
+            border: 2px solid #fff; 
+            display: block; 
+            image-rendering: pixelated; 
+        }
+        .controls { 
+            display: grid; 
+            grid-template-columns: 60px 60px 60px; 
+            gap: 10px; 
+            margin-top: 20px; 
+        }
+        button { 
+            height: 60px; 
+            background: #444; 
+            color: white; 
+            border: none; 
+            font-size: 20px; 
+            border-radius: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="gameCanvas" width="320" height="320"></canvas>
+
+    <div class="controls">
+        <div></div><button id="up">↑</button><div></div>
+        <button id="left">←</button><div></div><button id="right">→</button>
+        <div></div><button id="down">↓</button><div></div>
+    </div>
+
+    <script type="module" src="js/game.js"></script>
+
+</body>
+</html>
